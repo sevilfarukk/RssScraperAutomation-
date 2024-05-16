@@ -21,5 +21,5 @@ export enum accountCredientials {
 }
 
 export enum newFeedURL {
-    NEW_FEED = 'https://www.yahoo.com/news/rss36'
+    NEW_FEED = 'https://www.yahoo.com/news/rss'
 }

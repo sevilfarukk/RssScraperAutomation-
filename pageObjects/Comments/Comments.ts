@@ -14,12 +14,12 @@ export default class Comments {
 
     //Select a Feed from All Feeds
     async selectFeedElement() {
-        await this.clickLinkInFirstTableRow('tr');
+        await this.clickLinkInFirstTableRow();
     }
 
     //Select the news from selected Feed
     async selectAFeedFromtheList() {
-        await this.clickLinkInFirstTableRow('tr');
+        await this.clickLinkInFirstTableRow();
     }
 
     //Fill the Comment Field
@@ -38,9 +38,11 @@ export default class Comments {
         await expect(this.addedMessage).toContainText('Comment added successfully')
     }
 
-    async clickLinkInFirstTableRow(rowLocator) {
-        const firstRow = await this.page.locator(rowLocator);
+    async clickLinkInFirstTableRow() {
+        const firstRow = await this.page.locator('tr');
         const linkInFirstRow = await firstRow.locator('td:first-child > a').first();
         await linkInFirstRow.click();
     }
 }
+
+module.exports = Comments

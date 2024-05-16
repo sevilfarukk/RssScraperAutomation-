@@ -11,9 +11,8 @@ test.describe("Sign-Up Test Scenarios", async () => {
     test("Successful Sign-Up", async ({ signUp }) => {
         await signUp.signUpButtonClick()
         // Get and log the formatted current time
-        const formattedTime = await signUp.getCurrentFormattedTime();
         await signUp.fillSignUpFields(
-            accountCredientials.USERNAME + formattedTime,
+            accountCredientials.USERNAME,
             accountCredientials.PASSWORD,
             accountCredientials.PASSWORD_CONFIRMATION)
         await signUp.submitButtonClick()

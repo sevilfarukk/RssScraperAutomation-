@@ -2,8 +2,8 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 12,18,23 * * *' # Run every day at 12:00, 18:00, and 23:59
+ # schedule:
+   # - cron: '0 12,18,23 * * *' # Run every day at 12:00, 18:00, and 23:59
 
 jobs:
   tests_e2e:
